@@ -10,11 +10,11 @@ global:
 # Basic auth settings for Selenium Grid
 basicAuth:
       # Enable or disable basic auth
-      enabled: false
+      enabled: true
       # Username for basic auth
       username: admin
       # Password for basic auth
-      password: admin    
+      password: Eitan-Paran-admin
 
 # Deploy Router, Distributor, EventBus, SessionMap and Nodes separately
 isolateComponents: true
@@ -28,7 +28,7 @@ serviceAccount:
 # Configure the ingress resource to access the Grid installation.
 ingress:
   # Enable or disable ingress resource
-  enabled: true
+  enabled: false
   # Name of ingress class to select which controller will implement ingress resource
   className: ""
   # Custom annotations for ingress resource
@@ -95,7 +95,7 @@ components:
     # SecurityContext for router container
     securityContext: {}
     # Kubernetes service type (see https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types)
-    serviceType: ClusterIP
+    serviceType: LoadBalancer
     # Set specific loadBalancerIP when serviceType is LoadBalancer (see https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer)
     loadBalancerIP: ""
     # Custom annotations for router service
