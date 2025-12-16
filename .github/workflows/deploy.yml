@@ -1,0 +1,11 @@
+name: Deploy Full Isolate Selenium Grid to DOKS
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy_selenium_grid:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3

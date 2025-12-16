@@ -17,7 +17,7 @@ basicAuth:
       password: admin    
 
 # Deploy Router, Distributor, EventBus, SessionMap and Nodes separately
-isolateComponents: false
+isolateComponents: true
 
 # Service Account for all components
 serviceAccount:
