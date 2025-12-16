@@ -15,3 +15,10 @@ jobs:
         uses: digitalocean/action-doctl@v2
         with:
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+
+        # Fetch kubeconfig for the cluster so kubectl/helm can talk to it
+      - name: Fetch DOKS kubeconfig
+        run: |
+          doctl kubernetes cluster kubeconfig save "${{ secrets.DOKS_CLUSTER_NAME }}"
+          kubectl cluster-info
+        # doctl kubeconfig save is the documented way to add cluster creds to kubeconfig :contentReference[oaicite:1]{index=1}
