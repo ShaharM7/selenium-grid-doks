@@ -25,3 +25,16 @@ jobs:
 
       - name: Setup Helm
         uses: azure/setup-helm@v4
+
+        # Because I committed the chart folder (from helm pull --untar), deploy it from the local path:
+      - name: Deploy Selenium Grid (Helm upgrade/install)
+        run: |
+          helm upgrade --install selenium-grid ./selenium-grid \
+            --namespace selenium-grid \
+            --create-namespace \
+            --wait \
+            --timeout 10m
+
+      - name: Show resources
+        run: |
+          kubectl get all -n selenium-grid
