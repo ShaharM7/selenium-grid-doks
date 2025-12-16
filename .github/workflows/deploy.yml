@@ -20,6 +20,7 @@ jobs:
       - name: Fetch DOKS kubeconfig
         run: |
           doctl kubernetes cluster kubeconfig save "${{ secrets.DOKS_CLUSTER_NAME }}"
+          kubectl config set-context --current --namespace=selenium-grid
           kubectl cluster-info
         # doctl kubeconfig save is the documented way to add cluster creds to kubeconfig :contentReference[oaicite:1]{index=1}
 
