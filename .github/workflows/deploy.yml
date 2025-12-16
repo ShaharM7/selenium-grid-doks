@@ -22,3 +22,6 @@ jobs:
           doctl kubernetes cluster kubeconfig save "${{ secrets.DOKS_CLUSTER_NAME }}"
           kubectl cluster-info
         # doctl kubeconfig save is the documented way to add cluster creds to kubeconfig :contentReference[oaicite:1]{index=1}
+
+      - name: Setup Helm
+        uses: azure/setup-helm@v4
