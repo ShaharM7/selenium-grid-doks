@@ -97,7 +97,7 @@ components:
     # Kubernetes service type (see https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types)
     serviceType: LoadBalancer
     # Set specific loadBalancerIP when serviceType is LoadBalancer (see https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer)
-    loadBalancerIP: ""
+    loadBalancerIP: 159.223.250.133
     # Custom annotations for router service
     serviceAnnotations: {}
     # Tolerations for router pods
