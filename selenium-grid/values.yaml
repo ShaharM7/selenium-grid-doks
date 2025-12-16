@@ -10,7 +10,7 @@ global:
 # Basic auth settings for Selenium Grid
 basicAuth:
       # Enable or disable basic auth
-      enabled: true
+      enabled: false
       # Username for basic auth
       username: admin
       # Password for basic auth
@@ -34,7 +34,7 @@ ingress:
   # Custom annotations for ingress resource
   annotations: {}
   # Default host for the ingress resource
-  hostname: selenium-grid.local
+  hostname: selenium-grid-doks.local
   # Default host path for the ingress resource
   path: /
   # TLS backend configuration for ingress resource
