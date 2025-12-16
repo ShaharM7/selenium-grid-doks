@@ -488,7 +488,7 @@ chromeNode:
 # Configuration for firefox nodes
 firefoxNode:
   # Enable firefox nodes
-  enabled: true
+  enabled: false
 
   # NOTE: Only used when autoscaling.enabled is false
   # Enable creation of Deployment
@@ -607,7 +607,7 @@ firefoxNode:
 # Configuration for edge nodes
 edgeNode:
   # Enable edge nodes
-  enabled: true
+  enabled: false
 
   # NOTE: Only used when autoscaling.enabled is false
   # Enable creation of Deployment
